@@ -12,7 +12,6 @@ function App() {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    console.table({ bill, tip, people });
     if (bill > 0 && people > 0 && tip > 0) {
       setCalculatedTip((bill * (tip / 100)) / people);
       setTotal(bill / people + calculatedTip);
