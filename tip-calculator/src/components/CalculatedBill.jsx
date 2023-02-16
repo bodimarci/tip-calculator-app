@@ -1,6 +1,6 @@
 import React from "react";
 
-const CalculatedBill = ({bill, calculatedTip, total, handleResetBtn }) => {
+const CalculatedBill = ({ bill, calculatedTip, total, handleResetBtn }) => {
   const returnCurrencyAmt = (amt) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
@@ -24,7 +24,6 @@ const CalculatedBill = ({bill, calculatedTip, total, handleResetBtn }) => {
             {returnCurrencyAmt(calculatedTip)}
           </p>
         </div>
-
         <div className='mt-5'>
           <p className='text-sm text-[#F4FAFA] sm:text-base'>
             Total <br />
@@ -33,13 +32,11 @@ const CalculatedBill = ({bill, calculatedTip, total, handleResetBtn }) => {
             </span>
           </p>
         </div>
-        <div className={`${bill.value < 10000 ? 'mt-40' : 'mt-5'}`}>
+        <div className={`${bill.value < 10000 ? "mt-40" : "mt-5"}`}>
           <p className='text-right text-2xl text-[#26C0AB] sm:text-4xl'>
             {returnCurrencyAmt(total)}
           </p>
         </div>
-        
-        
       </div>
       <button
         onClick={handleResetBtn}
